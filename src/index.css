@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+* {
+  font-family: "Inter", sans-serif !important;
+  font-feature-settings: "zero", "ss01", "liga", "calt", "ccmp", "kern", "tnum";
+}
+@supports (font-variation-settings: normal) {
+  html,
+  * {
+    font-family: "Inter var", sans-serif !important;
+    font-feature-settings: "zero", "ss01", "liga", "calt", "ccmp", "kern";
+  }
+}
+
+html,
+body {
+  @apply h-full bg-gray-100;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#app {
+  @apply w-full min-h-full flex flex-col;
+}
