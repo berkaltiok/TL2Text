@@ -134,7 +134,7 @@
     else result = ""
 
     if (decimalPart.length == 1) decimalPart = decimalPart + "0"
-    if (decimalPart != "") result += " " + tens[decimalPart[0]] + " " + (ones[decimalPart[1]] !== "" ? ones[decimalPart[1]] + " Kuruş" : "")
+    if (decimalPart != "" && decimalPart > 0) result += " " + tens[decimalPart[0]] + " " + ones[decimalPart[1]] + " Kuruş"
 
     result = result.replace(/ /g, space ? " " : "").trim()
 
